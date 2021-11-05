@@ -2,13 +2,12 @@
 error_reporting(-1);
 require_once __DIR__ . '/../debug.php';
 require_once __DIR__ . '/../classes/Product.php';
-require_once __DIR__ . '/../classes/NotebookProduct.php';
+//require_once __DIR__ . '/../classes/NotebookProduct.php';
 require_once __DIR__ . '/../classes/BookProduct.php';
 
-$prod = new Product('Book', '22');
-echo $prod->getProduct();
-$prodNotebook = new NotebookProduct('notebook', 2022, 'Intel');
-echo $prodNotebook->getProduct();
+function offerCase(IGadget $product){
+    echo "<p>Get case for <strong>{$product->getName()}</strong></p>";
+}
 
-$prodBook = new BookProduct('Book', 2000, '14');
-echo $prodBook->getProduct();
+$notebook = new NotebookProduct('Notebook', 2000, 'Intel');
+offerCase($notebook);

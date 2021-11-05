@@ -1,6 +1,6 @@
 <?php
 
-class NotebookProduct extends Product
+class NotebookProduct extends Product implements IGadget
 {
     public $cpu;
 
@@ -8,6 +8,16 @@ class NotebookProduct extends Product
     {
         parent::__construct($name, $price);
         $this->cpu = $cpu;
+    }
+
+    public function getGadget()
+    {
+        // TODO: Implement getGadget() method.
+    }
+
+    public function addProduct($name, $price)
+    {
+        // TODO: Implement addProduct() method.
     }
 
     public function getProduct()
