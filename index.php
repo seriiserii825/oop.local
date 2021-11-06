@@ -1,5 +1,18 @@
 <?php
-        phpinfo();
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+require_once __DIR__.'/vendor/autoload.php';
+
+require_once __DIR__ . '/header.php';
 ?>
-<!--<hr>-->
-<!--<a href="/02">Second lesson</a>-->
+<div class="container">
+    <h2>OOP - is cool!!!</h2>
+    <?php
+
+
+
+
+    ?>
+</div>
+<?php
+require_once __DIR__ . '/footer.php';
