@@ -1,0 +1,63 @@
+.accordion {
+  &__item {
+	&.active {
+	  .accordion__header::after {
+		transform: translateY(-50%) rotate(90deg);
+	  }
+	}
+  }
+  &__header {
+	position: relative;
+	padding: 2.4rem 2.8rem;
+	font-size: 2.2rem;
+	line-height: 125%;
+	letter-spacing: 0.163rem;
+	text-transform: uppercase;
+	border: 1px solid $text-color;
+	cursor: pointer;
+	&::before,
+	&::after {
+	  content: '';
+	  position: absolute;
+	  width: 2.2rem;
+	  height: .2rem;
+	  background-color: $text-color;
+	  transition: all .6s;
+	}
+	&::before {
+	  top: 50%;
+	  transform: translateY(-50%);
+	  right: 2.8rem;
+	}
+	&::after {
+	  top: 50%;
+	  transform: translateY(-50%);
+	  right: 2.8rem;
+	}
+  }
+  &__content {
+	display: none;
+	padding: 4.4rem 2.8rem 2rem;
+	&-item {
+	  margin-bottom: 3rem;
+	}
+	li {
+	  margin-bottom: 4rem;
+	}
+	h4 {
+	  margin-bottom: .3rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.065rem;
+	}
+	p {
+	  margin-bottom: 0;
+	  line-height: 1.5;
+	}
+	a {
+	  color: $accent-dark;
+	  &:hover {
+		text-decoration: underline;
+	  }
+	}
+  }
+}

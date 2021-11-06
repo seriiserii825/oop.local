@@ -1,4 +1,5 @@
 <?php
-echo 'Hello from laradock';
+        phpinfo();
 ?>
-<a href="/02">Second lesson</a>
+<!--<hr>-->
+<!--<a href="/02">Second lesson</a>-->

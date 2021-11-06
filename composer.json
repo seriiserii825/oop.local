@@ -1,0 +1,18 @@
+{
+    "name": "serii/oop",
+    "description": "test oop project",
+    "authors": [
+        {
+            "name": "serii",
+            "email": "seriiburduja@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "classes\\": "classes"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

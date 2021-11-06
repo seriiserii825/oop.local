@@ -1,0 +1,12 @@
+@import "partials/fonts";
+@import "partials/variables";
+@import "partials/mixins";
+@import "../libs/slick/slick/slick.scss";
+@import "partials/base";
+
+@import "blocks/main-header";
+@import "blocks/home-intro";
+@import "blocks/sandwitch";
+@import "blocks/main-footer";
+@import "blocks/form.scss";
+@import "blocks/page-privacy";

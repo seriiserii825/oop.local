@@ -1,0 +1,179 @@
+.form {
+  color: white;
+  &__title {
+	margin-bottom: 3.8rem;
+	font-size: 3.6rem;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.08px;
+  }
+  &-group {
+	margin-bottom: 2.2rem;
+	padding-bottom: 0.4rem;
+	border-bottom: 3px solid rgba(white, 0.6);
+	&.active {
+	  border: 1px solid $accent-dark;
+	}
+	&--flex {
+	  display: flex;
+	  justify-content: space-between;
+	  @media screen and (max-width: 576px) {
+		display: block;
+	  }
+	  .form-group {
+		width: 48%;
+		@media screen and (max-width: 576px) {
+		  width: 100%;
+		}
+	  }
+	}
+	&--file {
+	  border: none;
+	}
+	&-file span,
+	& > span {
+	  display: block;
+	}
+	&-file span {
+	  position: relative;
+	  height: 10rem;
+	  background: rgba(255, 255, 255, 0.1);
+	  border: 3px solid rgba(255, 255, 255, 0.6);
+	  &::after {
+		content: "";
+		position: absolute;
+		top: 1.5rem;
+		left: 1.5rem;
+		width: 2rem;
+		height: 2.4rem;
+		background: url(../i/static/file.svg) no-repeat center center;
+	  }
+	  input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	  }
+	}
+	.wpcf7-not-valid-tip {
+	  z-index: -1;
+	}
+	label {
+	  display: block;
+	  margin-bottom: 0.6rem;
+	  font-size: 1.4rem;
+	  font-weight: 600;
+	  color: rgba(255, 255, 255, 0.4);
+	}
+	input,
+	textarea {
+	  display: block;
+	  font-family: "Garamond", sans-serif;
+	  width: 100%;
+	  height: 4.2rem;
+	  font-size: 1.4rem;
+	  font-weight: 600;
+	  color: $accent-dark;
+	  background-color: transparent;
+	  border: none;
+	  transition: all 0.4s;
+	  &:focus {
+		text-indent: 2rem;
+		outline: none;
+	  }
+	}
+	input {
+	  @include placeholder-input(rgba(255, 255, 255, 0.4), left);
+	}
+	textarea {
+	  padding-top: 1.2rem;
+	  height: 7.2rem;
+	  @include placeholder-textarea(rgba(255, 255, 255, 0.4), left);
+	}
+  }
+  input[type="submit"] {
+	display: block;
+	flex: 0 0 11.2rem;
+	height: 7rem;
+	line-height: 5.5rem;
+	font-family: "Dancing Script", sans-serif;
+	font-size: 2.8rem;
+	font-weight: 700;
+	color: white;
+	background: transparent;
+	border: 2px solid white;
+	transition: all 0.6s;
+	cursor: pointer;
+	@media screen and (max-width: 576px) {
+	  margin-bottom: 3rem;
+	  width: 100%;
+	}
+	&:hover {
+	  background-color: transparent;
+	}
+  }
+  &-footer {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 3.1rem;
+	@media screen and (max-width: 576px) {
+	  display: block;
+	}
+  }
+}
+.wpcf7 .ajax-loader {
+  display: none !important;
+}
+.privacy {
+  margin-left: 2.3rem;
+  text-align: left;
+  input[type="checkbox"] {
+	display: none;
+	&:checked ~ .wpcf7-list-item-label::after {
+	  opacity: 1;
+	}
+  }
+  .wpcf7-list-item-label {
+	position: relative;
+	display: block;
+	padding-left: 3rem;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	text-align: left;
+	color: white;
+	cursor: pointer;
+	&::before,
+	&::after {
+	  content: "";
+	  position: absolute;
+	}
+	&::before {
+	  top: 0rem;
+	  left: 0;
+	  width: 1.7rem;
+	  height: 1.7rem;
+	  border: 1px solid white;
+	}
+	&::after {
+	  top: 0.6rem;
+	  left: 0.4rem;
+	  width: 1.1rem;
+	  height: 0.7rem;
+	  background-image: url("../i/static/check.svg");
+	  background-size: cover;
+	  transition: all 0.4s;
+	  opacity: 0;
+	}
+	a {
+	  color: $text-accent;
+	  &:hover {
+		text-decoration: underline;
+	  }
+	}
+  }
+  span.wpcf7-list-item {
+	margin: 0;
+  }
+}
