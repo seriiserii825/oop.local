@@ -6,13 +6,7 @@ require_once __DIR__.'/vendor/autoload.php';
 require_once __DIR__ . '/header.php';
 ?>
 <div class="container">
-    <h2>OOP - is cool!!!</h2>
-    <?php
-
-
-
-
-    ?>
+    <h2>OOP - is cool</h2>
 </div>
 <?php
 require_once __DIR__ . '/footer.php';

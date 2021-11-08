@@ -1,5 +1,5 @@
 <?php
-function getFullName($lastName, $firstName)
+function getFullName($lastName, $firstName) : string
 {
     return $lastName . ' ' . $firstName;
 }
